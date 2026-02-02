@@ -9,7 +9,7 @@ class Appendable {
         int top;
 
         void make_space(){
-                int* array2 = new int[size + 1];
+                int* array2 = new int[size * 2];
                 for (int i = 0; i < size; i++){
                         array2[i] = array[i];
                 }
@@ -48,7 +48,7 @@ class Appendable {
         }
 
         void set(int index, int x){
-                if (index < 0 or index >= top){
+                if (index < 0 or index > top){
                         cout << index << " is an invalid index" << endl;
                         return;
                 }
