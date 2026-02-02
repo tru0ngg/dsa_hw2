@@ -1,6 +1,5 @@
 #include <iostream>
 #include <string>
-#include <cassert>
 using namespace std;
 
 
@@ -29,7 +28,7 @@ class Appendable {
         int get(int index){
                 if (index < 0 or index > top){
                         cout << index << " is an invalid index" << endl;
-                        return 0;
+                        return -1;
                 }
                 else {
                         return array[index];
