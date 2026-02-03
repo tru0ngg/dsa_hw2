@@ -17,7 +17,7 @@ void TripSort(int size, int arr[]){
 int main(){
         int size;
         cin >> size;
-        int arr[size];
+        int* arr = new int[size];
         for (int i = 0; i < size; i++){
                 cin >> arr[i];
         }
@@ -31,7 +31,9 @@ int main(){
                 }
                 prev_val = current_val;
         }
+
         cout << "TripSort will work" << endl;
+        delete [] arr;
 
         return 0;
 }
