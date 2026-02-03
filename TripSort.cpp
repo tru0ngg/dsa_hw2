@@ -27,6 +27,7 @@ int main(){
                 int current_val = arr[i];
                 if (prev_val > current_val){
                         cout << "TripSort will not work" << endl;
+                        delete [] arr;
                         return 0;
                 }
                 prev_val = current_val;
